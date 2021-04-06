@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  lms-dynamodb-local-optimized:
+    build: .
+    ports:
+      - "8001:8000"
+    command:
+      - "-jar"
+      - "DynamoDBLocal.jar"
+      - "-dbPath"
+      - "/db"
+      - "-sharedDb"
+      - "-optimizeDbBeforeStartup"
+  lms-dynamodb-local-un-optimized:
+    build: .
+    ports:
+      - "8002:8000"
+    command:
+      - "-jar"
+      - "DynamoDBLocal.jar"
+      - "-dbPath"
+      - "/db"
+      - "-sharedDb"
+

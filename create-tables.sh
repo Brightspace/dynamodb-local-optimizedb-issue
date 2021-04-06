@@ -1,0 +1,2 @@
+#!/bin/bash
+aws dynamodb create-table --table-name b-pk-table --attribute-definitions AttributeName=.pk,AttributeType=B --key-schema  AttributeName=.pk,KeyType=HASH --billing-mode PAY_PER_REQUEST --endpoint-url http://localhost:8000 --region=us-east-1
