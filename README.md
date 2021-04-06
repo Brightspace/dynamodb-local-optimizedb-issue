@@ -1,4 +1,4 @@
-## optimizeDbBeforeStartup option Breaks dynamodb local
+## optimizeDbBeforeStartup option breaks dynamodb local
 
 When using dynamodb-local with the -optimizeDbBeforeStartup option enabled you can insert duplicate items in a table that have the same hash key.
 
